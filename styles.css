@@ -1,55 +1,107 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
 
-h1 {
-    color: #555e59;
-    text-align: center;
-    font-family: 'Arial', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    animation: zoomInOut 2s infinite alternate;
-    
+body {
+  background-color: #333;
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* Added to stack children vertically */
+  height: 100vh;
+  margin: 0;
 }
 
-
-#quoteDisplay {
-        width: 80%; /* Set a fixed width for the box */
-        height: 33%; /* Set a fixed height for the box */
-        padding: 28px;
-        font-size: 18px;
-        border: 1px solid #CCCCCC;
-        background-color: #FFFFFF;
-        color: #000000;
-        border-radius: 5px;
-        box-shadow: 3px 3px 9px rgba(66, 66, 66, 0.76);
-        text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 5% auto 20px; /* Corrected margin property */
-    
-    
-}
-
-
-
-
-
-
-/*to style button*/
-button {
-    box-shadow: 0px 10px 14px -7px #276873;
-    background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-    background-color: #599bb3;
-    border-radius: 8px;
-    display: block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 13px 32px;
+.footer {
+  width: 450px;
+  text-align: center;
+  display: block;
+  margin: 15px auto 30px auto;
+  font-size: 0.8em;
+  color: #fff;
+  
+  a {
+    font-weight: 500;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #3d768a;
-    position: absolute;
-    left: 50%; /* Set the left edge to the middle of the parent */
-    transform: translateX(-50%); /* Move the button back by half of its width */
+    color: #fff;
   }
+}
+
+#wrapper {
+  text-align: center;
+}
+
+#quote-box {
+  border-radius: 3px;
+  position: relative;
+  width: 80%;
+  padding: 40px 50px;
+  display: table;
+  background-color: #fff;
+  text-align: left;
+  margin: auto; /* Center the quote-box */
+}
+
+.quote-text {
+  i {
+    font-size: 1em;
+    margin-right: 0.4em;
+  }
+  text-align: left;
+  width: 100%;
+  height: auto;
+  clear: both;
+  font-weight: 500;
+  font-size: 1.75em;
+  color: black;
+}
+
+.quote-author {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  clear: both;
+  padding-top: 20px;
+  font-size: 1em;
+}
+
+.buttons {
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.button {
+  height: 38px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #333;
+  outline: none;
+  font-size: 0.85em;
+  padding: 8px 18px 6px 18px;
+  margin-top: 30px;
+  opacity: 1;
+  cursor: pointer;
+  
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+#tweet-quote,
+#tumblr-quote {
+  float: left;
+  padding: 0px;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 5px;
+  height: 30px;
+  width: 40px;
+}
+
+#new-quote {
+  float: right;
+}
